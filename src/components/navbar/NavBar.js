@@ -1,9 +1,11 @@
-import React from 'react'
+
 import './navbar.css';
-export default function NavBar() {
+import React from 'react'
+
+const NavBar = () => {
     return (
-        <>
-         <div id="menu-btn" class="fas fa-bars"></div>   
+        <header className="header">
+             <div id="menu-btn" class="fas fa-bars"></div>   
         <a href="#" class="logo"><span>SA</span> MS</a>
         <nav class="navbar">
         <a href="#home" >home</a>
@@ -16,8 +18,8 @@ export default function NavBar() {
             <button class="btn" >login</button>
             <i class="far fa-user"></i>
         </div>
-        
-        </>
-       
+        </header>
     )
 }
+
+export default NavBar
