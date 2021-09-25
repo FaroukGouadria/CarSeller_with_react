@@ -1,22 +1,24 @@
 
 import './navbar.css';
-import React from 'react'
+import React,{useState} from 'react'
+import {Link} from'react-router-dom';
 
 const NavBar = () => {
+    const[isMobile,setIsMobile]=useState(false);
     return (
         <header className="header">
-             <div id="menu-btn" class="fas fa-bars"></div>   
-        <a href="#" class="logo"><span>SA</span> MS</a>
-        <nav class="navbar">
-        <a href="#home" >home</a>
-        <a href="#vehicules" >vehicules</a>
-        <a href="#services" >Services</a>
-        <a href="#reviews" >Reviews</a>
-        <a href="#contact" >Contact</a>
+             <div id="menu-btn" className="fas fa-bars"></div>   
+        <Link to="/" className="logo"><span>SA</span> MS</Link>
+        <nav className="navbar">
+        <Link to="/home" >home</Link>
+        <Link to="/vehicules" >vehicules</Link>
+        <Link to="/services" >Services</Link>
+        <Link to="/reviews" >Reviews</Link>
+        <Link to="/contact" >Contact</Link>
         </nav>
         <div id="login-btn">
-            <button class="btn" >login</button>
-            <i class="far fa-user"></i>
+            <button className="btn" >login</button>
+            <i className="far fa-user"></i>
         </div>
         </header>
     )

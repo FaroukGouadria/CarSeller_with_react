@@ -1,0 +1,14 @@
+.home{
+    padding-top: 10rem;
+    overflow-x: hidden;
+    text-align: center;
+}
+.home h1{
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    color: var(--black);
+}
+.home img{
+    width: 100%;
+    margin: 1rem 0;
+}

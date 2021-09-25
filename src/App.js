@@ -1,7 +1,11 @@
 import React,{useState,useEffect}from'react';
-import {css} from '@emotion/react';
-import PropagateLoader from "react-spinners/PropagateLoader";
 import NavBar from './components/navbar/NavBar';
+import {BrowserRouter as Router, Route,Switch}from"react-router-dom"
+import Home from './components/home/home';
+import Vehicules from './components/vehicules/vehicules';
+import Reviews from './components/Reviews/Reviews';
+import Services from './components/Services/Services';
+import Contact from './components/contact/contact';
 function App() {
   // const [loading,setloading] = useState(false);
   //   const override =css`
@@ -16,19 +20,26 @@ function App() {
   //     }, 5000);
   //   },[]);
   return (
-    <>  
-      {/* {
-        loading ? <PropagateLoader color={"#3d2514"} loading={loading} css={override} size={40}/>
-      :
-      <>
-       <NavBar/>
-       
-      </>
-      } */}
-
+    <Router>  
       <NavBar/>
-     
-    </>
+      <Switch>
+        <Route path="/home"  component={Home} exact>
+        <Home/>
+        </Route>
+        <Route path="/vehicules"  component={Vehicules} exact>
+        <Vehicules/>
+        </Route>
+        <Route path="/reviews"  component={Reviews} exact>
+        <Reviews/>
+        </Route>
+        <Route path="/services"  component={Services} exact>
+        <Services/>
+        </Route>
+        <Route path="/contact"  component={Contact} exact>
+        <Contact/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
