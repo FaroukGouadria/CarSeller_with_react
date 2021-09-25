@@ -6,6 +6,7 @@ import Vehicules from './components/vehicules/vehicules';
 import Reviews from './components/Reviews/Reviews';
 import Services from './components/Services/Services';
 import Contact from './components/contact/contact';
+import Footer from './components/footer/footer';
 function App() {
   // const [loading,setloading] = useState(false);
   //   const override =css`
@@ -20,26 +21,20 @@ function App() {
   //     }, 5000);
   //   },[]);
   return (
-    <Router>  
-      <NavBar/>
-      <Switch>
-        <Route path="/home"  component={Home} exact>
-        <Home/>
-        </Route>
-        <Route path="/vehicules"  component={Vehicules} exact>
-        <Vehicules/>
-        </Route>
-        <Route path="/reviews"  component={Reviews} exact>
-        <Reviews/>
-        </Route>
-        <Route path="/services"  component={Services} exact>
-        <Services/>
-        </Route>
-        <Route path="/contact"  component={Contact} exact>
-        <Contact/>
-        </Route>
-      </Switch>
-    </Router>
+
+    <div className="app">
+      <Router>
+        <NavBar/>
+        <div className="section">
+            <Home/>
+            <Vehicules/>
+            <Reviews/>
+            <Services/>
+            <Contact/>
+            <Footer/>
+        </div>
+</Router>
+    </div>
   );
 }
 
